@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-image: linear-gradient(120deg, #3b4b6b, #d4c1f0);
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;    
+    border: none;
+    background: white;
+    outline: none;
+}
+
+form button {
+    color: #3b4b6b;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #3b4b6b;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    font-size: 1.5rem; 
+    color: black; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn, .complete-btn{
+    background: #3b4b6b;
+    color: white;
+    border: none;
+    padding: 1rem;  
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background: #b996ee;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Removing stlyes from form */
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;   
+    outline: none;
+    border: none;
+
+}
+/* Styling our div */
+.select{
+   margin: 1rem;
+   position: relative;
+   overflow: hidden; 
+}
+
+/* Styling form */
+select{
+    color: #3b4b6b;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1.25rem;
+}
+
+/* Reaading the arrow to our submit form */
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #3b4b6b;
+    top: 0;
+    right: 0;   
+    padding: 1.25rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Adding animation to our form */
+.select:hover::after {
+    background: white;
+    color: #3b4b6b;
+}
